@@ -1,0 +1,799 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no"
+    />
+    <!--Style-->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Eddie`s Car</title>
+  </head>
+  <body>
+    <div id="sprite" style="display: none">
+      <svg>
+        <symbol id="icon-close" viewBox="0 0 48 48">
+          <path
+            d="M28.782,24.144,47.812,5.379a2.954,2.954,0,0,0,0-4.22,3.055,3.055,0,0,0-4.279,0L24.5,19.924,5.473,1.159a3.055,3.055,0,0,0-4.279,0,2.954,2.954,0,0,0,0,4.22l19.03,18.765L1.194,42.91a2.954,2.954,0,0,0,0,4.22,3.055,3.055,0,0,0,4.279,0L24.5,28.364,43.532,47.129a3.055,3.055,0,0,0,4.279,0,2.954,2.954,0,0,0,0-4.22Z"
+          />
+        </symbol>
+        <symbol id="icon-email" viewBox="0 0 549 474">
+          <path
+            d="M.473,456.919a3.589,3.589,0,0,0,.474,1.9c0,.474.474,1.423.474,1.9s.474.949.474,1.9c.474.475.474.949.948,1.9.474.474.474.949.948,1.423s.948.949.948,1.423l1.422,1.423.474.474a.465.465,0,0,1,.474.475,11.3,11.3,0,0,0,5.215,2.847c.474,0,.474,0,.948.474a23.784,23.784,0,0,0,5.689.949H530.511a23.782,23.782,0,0,0,5.689-.949c.474,0,.474,0,.948-.474a51.692,51.692,0,0,0,5.215-2.847.464.464,0,0,0,.474-.475l.474-.474,1.422-1.423c.474-.474.948-.949.948-1.423.474-.474.474-.949.948-1.423s.474-.949.948-1.9c.474-.474.474-.949.474-1.9,0-.474.474-1.423.474-1.9s.474-.949.474-1.9V19.454A19.233,19.233,0,0,0,529.563,0H19.437A19.233,19.233,0,0,0,0,19.454V455.021C.473,455.5.473,455.97.473,456.919Zm60.684-22.3,143.651-171.76,59.736,41.754a19.561,19.561,0,0,0,21.808,0l59.736-41.754,143.651,171.76Zm450.864-34.162-134.169-159.9,133.695-93.471V400.456ZM38.875,38.907H511.547v61.207l-236.1,164.643L38.875,100.114Zm0,108.18L172.57,240.559,38.875,400.456Z"
+          />
+        </symbol>
+        <symbol id="icon-phone" viewBox="0 0 57 56">
+          <path
+            d="M55.534,44.933l-8.742-8.744a4.56,4.56,0,0,0-6.427.121l-4.4,4.4-.869-.484A43.825,43.825,0,0,1,24.5,32.568a44.055,44.055,0,0,1-7.677-10.612c-.164-.295-.32-.579-.474-.849L19.3,18.155,20.756,16.7a4.553,4.553,0,0,0,.117-6.427L12.131,1.528A4.554,4.554,0,0,0,5.7,1.65L3.24,4.128l.068.067a14.233,14.233,0,0,0-2.03,3.581,14.845,14.845,0,0,0-.9,3.632C-.78,20.978,3.593,29.724,15.461,41.593,31.866,58,45.087,56.758,45.658,56.7a14.778,14.778,0,0,0,3.643-.915,14.2,14.2,0,0,0,3.568-2.022l.054.048,2.5-2.444A4.561,4.561,0,0,0,55.534,44.933Z"
+          />
+        </symbol>
+      </svg>
+    </div>
+
+    <header class="header" id="header">
+      <div class="container">
+        <div class="header__inner">
+          <a class="header__logo" href="#">
+            <img
+              src="img/Logotype.png"
+              alt="Логотип компании Eddie's Car"
+              width="191"
+              height="40"
+            />
+          </a>
+          <div class="header__timetable timetable">
+            <span class="timetable__time">с 9:00 до 21:00</span><br />
+            <span class="timetable__day">без выходных</span>
+          </div>
+          <!--/.header__timetable-->
+          <div class="header__phone-wrapper">
+            <a class="header__phone" href="tel: +7818247472*"
+              >+380 247-47-2533</a
+            >
+            <a class="header__phone" href="tel: +7818247472*"
+              >+380 247-47-2533</a
+            >
+          </div>
+          <!--/.header__phone-wrapper-->
+          <button class="header__button btnCallBack">Заказать звонок</button>
+        </div>
+        <!--/.header__inner-->
+      </div>
+      <!--/.container-->
+    </header>
+    <!--/.header-->
+    <main>
+      <!--Intro-->
+      <section class="intro" id="intro">
+        <div class="container">
+          <div class="intro__inner">
+            <h1 class="intro__title">Оригинальные запчасти для белаз</h1>
+            <p class="intro__subtitle">с бесплатной доставкой в Ваш город!</p>
+            <div class="intro__list">
+              <div class="intro__item">
+                <div class="intro__icon-wrapper">
+                  <img
+                    src="img/intro-item-1.png"
+                    alt="icon-1"
+                    width="25"
+                    height="30"
+                  />
+                </div>
+                <p>Дилерские цены - ниже на 20%, работаем без посредников!</p>
+              </div>
+              <!--/.intro__item-->
+              <div class="intro__item">
+                <div class="intro__icon-wrapper">
+                  <img
+                    src="img/intro-item-2.png"
+                    alt="icon-2"
+                    width="30"
+                    height="24"
+                  />
+                </div>
+                <p>Срочная бесплатная доставка за 7 дней</p>
+              </div>
+              <!--/.intro__item-->
+              <div class="intro__item">
+                <div class="intro__icon-wrapper">
+                  <img
+                    src="img/intro-item-3.png"
+                    alt="icon-3"
+                    width="30"
+                    height="30"
+                  />
+                </div>
+                <p>Даем рассрочку 6 месяцев</p>
+              </div>
+              <!--/.intro__item-->
+              <div class="intro__item">
+                <div class="intro__icon-wrapper">
+                  <img
+                    src="img/intro-item-4.png"
+                    alt="icon-4"
+                    width="23"
+                    height="30"
+                  />
+                </div>
+                <p>Даем гарантию от 12 месяцев</p>
+              </div>
+              <!--/.intro__item-->
+            </div>
+            <!--/.intro__list-->
+          </div>
+          <!--/.intro__inner-->
+        </div>
+        <!--/.container-->
+      </section>
+      <!--/.intro-->
+
+      <!--Price-->
+      <section class="section price__wrapper">
+        <div class="container">
+          <div class="price">
+            <h2 class="price__title">
+              Получите прайс прямо сейчас на электронную почту!
+            </h2>
+
+            <form class="price__form form" action="#" method="post">
+              <label class="price__label form__label" for="user-email-1">
+                <input
+                  class="price__input input"
+                  name="user-email"
+                  type="email"
+                  id="user-email-1"
+                  placeholder="Введите ваш e-mail"
+                  required
+                />
+                <svg class="form__icon" width="20" height="18">
+                  <use xlink:href="#icon-email"></use>
+                </svg>
+              </label>
+              <!--/.price__label-->
+
+              <label class="price__label form__label" for="user-tel-1">
+                <input
+                  class="price__input input"
+                  name="user-tel"
+                  type="tel"
+                  id="user-tel-1"
+                  placeholder="Введите ваш телефон"
+                  required
+                />
+                <svg class="form__icon" width="20" height="18">
+                  <use xlink:href="#icon-phone"></use>
+                </svg>
+              </label>
+              <!--/.price__label-->
+
+              <p class="form__text">
+                Прайс придет к Вам на почту в течение 5 минут!
+              </p>
+              <button
+                class="form__button price__button"
+                type="submit"
+                value="Получить прайс"
+              >
+                Получить прайс
+              </button>
+            </form>
+            <!--/.price__form-->
+          </div>
+          <!--.price-->
+        </div>
+        <!--/.container-->
+      </section>
+      <!--/.section price__wrapper-->
+
+      <!--Features-->
+      <section class="section features__wrapper">
+        <div class="container">
+          <div class="features">
+            <h2 class="section__title">Вам не придется ждать!</h2>
+            <h3 class="section__subtitle features__subtitle">
+              Любые запчасти для всех моделей Белаз всегда в наличии!
+            </h3>
+            <ul class="features__list">
+              <li class="features__item-wrapper">
+                <div class="features__img-wrapper">
+                  <img
+                    src="img/features-4.png"
+                    alt="features-4"
+                    width="95"
+                    height="100"
+                  />
+                </div>
+                <p>Любые типы деталей от шайбы до двигателя!</p>
+              </li>
+              <!--/.features__item-wrapper-->
+              <li class="features__item-wrapper">
+                <div class="features__img-wrapper">
+                  <img
+                    src="img/features-3.png"
+                    alt="features-3"
+                    width="100"
+                    height="88"
+                  />
+                </div>
+                <p>Все модификации Белаз от 45 т до 450 т</p>
+              </li>
+              <!--/.features__item-wrapper-->
+              <li class="features__item-wrapper">
+                <div class="features__img-wrapper">
+                  <img
+                    src="img/features-2.png"
+                    alt="features-2"
+                    width="100"
+                    height="93"
+                  />
+                </div>
+                <p>Отгружаем в день заказа!</p>
+              </li>
+              <!--/.features__item-wrapper-->
+              <li class="features__item-wrapper">
+                <div class="features__img-wrapper">
+                  <img
+                    src="img/features-1.png"
+                    alt="features-1"
+                    width="95"
+                    height="92"
+                  />
+                </div>
+                <p>Доставим в любое место!</p>
+              </li>
+              <!--/.features__item-wrapper-->
+            </ul>
+            <!--/.features__list-->
+          </div>
+          <!--/.features-->
+        </div>
+        <!--.container-->
+      </section>
+      <!--/.section features__wrapper-->
+
+      <!--Search-->
+      <section class="section search__wrapper">
+        <div class="container">
+          <div class="search">
+            <h2 class="section__title search__title">
+              Ищете конкретную деталь?
+            </h2>
+            <h3 class="section__subtitle search__subtitle">
+              Если у Вас есть артикул - введите его в поле ниже и получите цену
+              <span>Прямо сейчас!</span>
+            </h3>
+            <form class="search__form form" action="#" method="post">
+              <label class="search__label form__label" for="vendor-code">
+                <input
+                  class="input"
+                  type="text"
+                  name="vendor-code"
+                  id="vendor-code"
+                  placeholder="Введите артикул детали"
+                  required
+                />
+              </label>
+              <!--/.search__label-->
+
+              <label
+                class="search__label form__label label--tel"
+                for="user-tel-2"
+              >
+                <input
+                  class="input"
+                  type="tel"
+                  name="user-tel"
+                  id="user-tel-2"
+                  placeholder="Введите ваш телефон"
+                  required=""
+                />
+                <svg class="form__icon" width="20" height="18">
+                  <use xlink:href="#icon-phone"></use>
+                </svg>
+              </label>
+              <!--/.search__label-->
+
+              <button
+                class="search__button form__button"
+                type="submit"
+                value="Узнать цену"
+              >
+                Узнать цену
+              </button>
+            </form>
+            <!--/.search__form-->
+            <p class="search__text">
+              Мы перезвоним вам в течение 3 минут и назовем цену детали!
+            </p>
+            <div class="search__phone phone">
+              <p class="phone__text">Или Вы можете перезвонить нам сами:</p>
+              <a class="phone__link" href="tel: +38024747*">+380 247-47-2533</a>
+            </div>
+            <!--.search__phone-->
+          </div>
+          <!--.search-->
+        </div>
+        <!--/.container-->
+      </section>
+      <!--/.section .search__wrapper-->
+
+      <!--Guarantee-->
+      <section class="section">
+        <div class="container">
+          <div class="guarantee">
+            <h2 class="section__title">
+              Мы гарантируем сохранность деталей во время перевозки!
+            </h2>
+            <ul class="guarantee__list">
+              <li class="guarantee__item">
+                <img
+                  class="guarantee__img"
+                  src="img/guarantee-2.jpg"
+                  width="230"
+                  height="300"
+                  alt="guarantee-2"
+                />
+                <p class="guarantee__text">
+                  Гарантия на целостность поставки прописана в договоре
+                </p>
+                <a class="guarantee__link" href="#">Подробнее</a>
+              </li>
+              <li class="guarantee__item">
+                <img
+                  class="guarantee__img"
+                  src="img/guarantee-1.jpg"
+                  width="230"
+                  height="300"
+                  alt="guarantee-1"
+                />
+                <p class="guarantee__text">
+                  Каждая запчасть доставляется с завода<br />
+                  в жесткой упаковке
+                </p>
+                <a class="guarantee__link" href="#">Подробнее</a>
+              </li>
+              <li class="guarantee__item">
+                <img
+                  class="guarantee__img"
+                  src="img/guarantee-3.jpg"
+                  width="230"
+                  height="300"
+                  alt="guarantee-3"
+                />
+                <p class="guarantee__text">
+                  Дополнительный контроль качества нашими специалистами
+                </p>
+                <a class="guarantee__link" href="#">Подробнее</a>
+              </li>
+            </ul>
+            <!--/.guarantee__list-->
+          </div>
+          <!--/.guarantee-->
+        </div>
+        <!--/.container-->
+      </section>
+      <!--/.section -->
+
+      <!--Bonuses-->
+      <section class="section bonuses__wrapper">
+        <div class="container">
+          <div class="bonuses">
+            <h2 class="section__title">
+              У нас разработаны бонусные системы и скидки для наших клиентов
+            </h2>
+            <ul class="bonus__list">
+              <li class="bonus__item">
+                <div class="bonus__img"><p>10%</p></div>
+                <p class="bonus__text">
+                  Дополнительная скидка 10% на вторую запчасть и любые
+                  последующие
+                </p>
+              </li>
+              <!--/.bonus__item-->
+              <li class="bonus__item">
+                <div class="bonus__img"><p>20%</p></div>
+                <p class="bonus__text">
+                  Скидка 20% при заключении договора на годовое сервисное
+                  обслуживание
+                </p>
+              </li>
+              <!--/.bonus__item-->
+              <li class="bonus__item">
+                <div class="bonus__img">
+                  <img
+                    src="img/bonus-3.png"
+                    alt="bonus-3"
+                    width="56"
+                    height="33"
+                  />
+                </div>
+                <p class="bonus__text">
+                  Бесплатная доставка по всей России для всех клиентов
+                </p>
+              </li>
+              <!--/.bonus__item-->
+              <li class="bonus__item">
+                <div class="bonus__img">
+                  <img
+                    src="img/bonus-4.png"
+                    alt="bonus-4"
+                    width="35"
+                    height="39"
+                  />
+                </div>
+                <p class="bonus__text">
+                  Бесплатная круглосуточная техническая поддержка
+                </p>
+              </li>
+              <!--/.bonus__item-->
+            </ul>
+            <!--/.bonus__list-->
+          </div>
+          <!--/.bonuses-->
+        </div>
+        <!--/.container-->
+      </section>
+      <!--/.section .bonuses__wrapper-->
+
+      <!--Process-->
+      <section class="section">
+        <div class="container">
+          <div class="process">
+            <h2 class="section__title">С нами удобно работать!</h2>
+            <h3 class="section__subtitle">
+              Более 70% клиентов приходят к нам по рекомендации!
+            </h3>
+            <ul class="process__list">
+              <li class="process__item">
+                <div class="process__img">
+                  <img
+                    src="img/process-item-1.png"
+                    alt="process-1"
+                    width="88"
+                    height="88"
+                  />
+                </div>
+                <p class="process__text">
+                  Вы вносите предоплату в размере 50% от стоимости запчасти
+                </p>
+              </li>
+              <!--/.process__item-->
+              <li class="process__item">
+                <div class="process__img">
+                  <img
+                    src="img/process-item-2.png"
+                    alt="process-2"
+                    width="87"
+                    height="87"
+                  />
+                </div>
+                <p class="process__text">Отправляем запчастив день заказа</p>
+              </li>
+              <!--/.process__item-->
+              <li class="process__item">
+                <div class="process__img">
+                  <img
+                    src="img/process-item-3.png"
+                    alt="process-3"
+                    width="88"
+                    height="88"
+                  />
+                </div>
+                <p class="process__text">
+                  Получаете деталь, проверяете, оплачиваете оставшиеся 50%
+                </p>
+              </li>
+            </ul>
+            <!--/.process__list-->
+          </div>
+          <!--/.process-->
+        </div>
+        <!--/.container-->
+      </section>
+      <!--/.section-->
+
+      <!--Gallery-->
+      <section class="section gallery__wrapper">
+        <div class="container">
+          <div class="gallery">
+            <h2 class="section__title">У нас собственный склад!</h2>
+            <h3 class="section__subtitle">
+              Это позволяет нам быстро обрабатывать запросы и отгружать детали в
+              день заказа!
+            </h3>
+            <div class="gallery__list-wrapper">
+              <svg
+                class="arrow-previous"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 189 306"
+              >
+                <g>
+                  <path
+                    d="M35.757,0,0,35.7,117.486,153,0,270.3,35.757,306,189,153Z"
+                  />
+                </g>
+              </svg>
+              <!--/.arrow-previous-->
+              <ul class="gallery__list">
+                <li class="gallery__item">
+                  <img src="img/warehouse_1.jpg" alt="Склад №1" />
+                </li>
+                <li class="gallery__item">
+                  <img src="img/warehouse_2.jpg" alt="Склад №2" />
+                </li>
+                <li class="gallery__item">
+                  <img src="img/warehouse_3.jpg" alt="Склад №3" />
+                </li>
+                <li class="gallery__item">
+                  <img src="img/warehouse_4.jpg" alt="Склад №4" />
+                </li>
+                <li class="gallery__item">
+                  <img src="img/warehouse_5.jpg" alt="Склад №5" />
+                </li>
+                <li class="gallery__item">
+                  <img src="img/warehouse_6.jpg" alt="Склад №6" />
+                </li>
+              </ul>
+              <!--/.gallery__list-->
+              <svg
+                class="arrow-next"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 189 306"
+              >
+                <g>
+                  <path
+                    d="M35.757,0,0,35.7,117.486,153,0,270.3,35.757,306,189,153Z"
+                  />
+                </g>
+              </svg>
+              <!--/.arrow-next-->
+            </div>
+            <!--/.gallery__list-wrapper-->
+          </div>
+          <!--/.gallery-->
+        </div>
+        <!--/.container-->
+      </section>
+      <!--/.section .gallery__wrapper-->
+
+      <!--Services-->
+      <section class="section">
+        <div class="container">
+          <div class="services">
+            <h2 class="section__title">
+              У нас в штате есть мобильные бригады, готовые выехать на сервисное
+              обслуживание, ремонт и проведение диагностики!
+            </h2>
+            <ul class="services__list">
+              <li class="services__item">
+                <div class="services__img-wrapper">
+                  <img
+                    src="img/services-1.png"
+                    alt="service-1"
+                    width="70"
+                    height="57"
+                  />
+                </div>
+                <p class="services__text">
+                  Организуем выезд специалистов в течение двух дней
+                </p>
+              </li>
+              <!--/.services__item-->
+              <li class="services__item">
+                <div class="services__img-wrapper">
+                  <img
+                    src="img/services-2.png"
+                    alt="service-2"
+                    width="70"
+                    height="57"
+                  />
+                </div>
+                <p class="services__text">
+                  Бригады укомплектованы всем необходимым оборудованием для
+                  производства работ любой сложности
+                </p>
+              </li>
+              <!--/.services__item-->
+              <li class="services__item">
+                <div class="services__img-wrapper">
+                  <img
+                    src="img/services-3.png"
+                    alt="service-3"
+                    width="77"
+                    height="57"
+                  />
+                </div>
+                <p class="services__text">
+                  Все специалисты проходят обучение и ежегодную аттестацию
+                </p>
+              </li>
+              <!--/.services__item-->
+            </ul>
+            <!--/.services__list-->
+          </div>
+          <!--/.services-->
+        </div>
+        <!--/.container-->
+      </section>
+      <!--/.section-->
+
+      <!--Consultation-->
+      <section class="section consultation__wrapper">
+        <div class="container">
+          <div class="consultation">
+            <h2 class="section__title">
+              Если Вам необходима бесплатная консультация по вопросу
+              обслуживания
+            </h2>
+            <div class="consultation__phone phone">
+              <p class="phone__text">Звоните нам по телефону:</p>
+              <a class="phone__link" href="tel: +380247472533*"
+                >+380 247-47-2533</a
+              >
+            </div>
+            <!--.consultation__phone-->
+
+            <form class="consultation__form form" action="#" method="post">
+              <label class="consultation__label form__label" for="user-tel-3">
+                <input
+                  class="input"
+                  type="tel"
+                  name="user-tel"
+                  id="user-tel-3"
+                  placeholder="Введите ваш телефон"
+                  required=""
+                />
+                <svg class="form__icon" width="20" height="18">
+                  <use xlink:href="#icon-phone"></use>
+                </svg>
+              </label>
+              <!--/.consultation__label-->
+              <button
+                class="consultation__button form__button"
+                type="submit"
+                value="Перезвонить сейчас"
+              >
+                Перезвонить сейчас
+              </button>
+            </form>
+            <!--/.consultation__form-->
+          </div>
+          <!--/.consultation-->
+        </div>
+        <!--/.container-->
+      </section>
+      <!--/.section-->
+
+      <!--Address-->
+      <section class="section address__wrapper">
+        <div class="container">
+          <div class="address">
+            <h2 class="section__title">Приезжайте в наш офис!</h2>
+            <p class="address__text">
+              г. Кременчук, ул. Театральная, 13, д. 65
+            </p>
+            <a class="address__phone" href="tel: +38066555*"
+              >+380 247-47-2533</a
+            >
+          </div>
+          <!--/.address-->
+        </div>
+        <!--/.container-->
+      </section>
+      <!--/.section-->
+
+      <!--Map-->
+      <section class="map">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1683.004875955808!2d33.41275445196129!3d49.06086571909963!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d7532fc5b954d3%3A0xa9b2b684425e76da!2z0YPQuy4g0KLQtdCw0YLRgNCw0LvRjNC90LDRjywgMTMsINCa0YDQtdC80LXQvdGH0YPQsywg0J_QvtC70YLQsNCy0YHQutCw0Y8g0L7QsdC70LDRgdGC0YwsIDM5NjAw!5e0!3m2!1sru!2sua!4v1696093601119!5m2!1sru!2sua"
+          width="100%"
+          height="375"
+          style="border: 0"
+          allowfullscreen=""
+        ></iframe>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__inner">
+          <a class="footer__logo" href="#">
+            <img
+              src="img/Logotype.png"
+              alt="Логотип компании Eddie's Car"
+              width="191"
+              height="40"
+            />
+          </a>
+          <div class="footer__copyright">&copy; 2023 Eddie`s Car</div>
+          <div class="footer__phone-wrapper">
+            <p class="footer__text">Есть вопросы? Звоните!</p>
+            <a class="footer__phone" href="tel:+380247472533"
+              >+380 247-47-2533</a
+            >
+          </div>
+        </div>
+        <!--/.footer__inner-->
+      </div>
+      <!--/.container-->
+    </footer>
+    <!--/.footer-->
+
+    <!--Modal Popup-->
+    <!--Popup CallBack-->
+    <div class="popup popup--callback animated fadeIn">
+      <div class="popup__inner animated bounceIn">
+        <button class="popup__close">
+          <svg class="popup__close-icon" width="14" height="14">
+            <use xlink:href="#icon-close"></use>
+          </svg>
+        </button>
+        <!--/.popup__close-->
+
+        <h3 class="popup__title">Оставьте свой номер и мы свяжемся с Вами</h3>
+        <form class="popup__form" action="#" method="post">
+          <label class="popup__label popup__label--user" for="userName">
+            <input
+              class="popup__input"
+              name="user-name"
+              id="userName"
+              type="text"
+              placeholder="Ваше имя"
+              required
+            />
+          </label>
+
+          <label class="popup__label popup__label--phone" for="userPhone-2">
+            <input
+              class="popup__input"
+              name="user-phone"
+              id="userPhone-2"
+              type="tel"
+              placeholder="Ваш номер"
+              required
+            />
+          </label>
+
+          <button class="popup__button" type="submit">Заказать звонок</button>
+        </form>
+        <!--/.popup__form-->
+      </div>
+      <!--/.popup__inner-->
+    </div>
+    <!--popup--callback-->
+
+    <!--Page Up-->
+    <a class="pageup" href="#" data-scroll="#intro">
+      <svg
+        viewBox="0 0 26 26"
+        xmlns="http://www.w3.org/2000/svg"
+        width="24"
+        height="24"
+      >
+        <path
+          fill-rule="evenodd"
+          d="M26 0H0V26H26V0ZM4.6593 17.7519L13.1233 10.33L21.5873 17.7519L22.9059 16.2481L13.7826 8.24813L13.1233 7.67L12.464 8.24813L3.3407 16.2481L4.6593 17.7519Z"
+          fill="black"
+        />
+      </svg>
+    </a>
+    <!--/.pageup-->
+
+    <!--JQuery-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js"></script>
+
+    <!--Slick Slider-->
+    <script
+      type="text/javascript"
+      src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
+    ></script>
+
+    <script src="js/index.js"></script>
+  </body>
+</html>
